@@ -49,9 +49,11 @@ resource "aws_instance" "tp_instance" {
   vpc_security_group_ids = [aws_security_group.ssh.id]
 
   tags = {
-    Name   = var.instance_name
-    env    = "formation"
-    cours  = "iac"
-    auteur = var.author
+    Name     = var.instance_name
+    env      = "formation"
+    cours    = "iac"
+    auteur   = var.author
+    jour     = "3"
+    pipeline = "github-actions"
   }
 }
